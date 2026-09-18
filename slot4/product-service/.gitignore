@@ -16,9 +16,10 @@ build/
 ### Maven ###
 .mvn/wrapper/maven-wrapper.jar
 
-### OS ###
+### OS & Office ###
 .DS_Store
 Thumbs.db
+~$*
 
 ### Logs ###
 *.log
