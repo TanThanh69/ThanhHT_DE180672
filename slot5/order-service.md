@@ -13,7 +13,7 @@
 - [ ] Tạo Model `Order`
 - [ ] Tạo Repository `OrderRepository`
 - [ ] Tạo DTO `OrderRequest`
-- [ ] Tạo Service `OrderService`
+- [x] Tạo Service `OrderService`
 - [ ] Tạo Controller `OrderController`
 - [ ] Test thủ công bằng Postman
 - [ ] Viết Integration Test (TestContainers + RestAssured)
@@ -271,8 +271,8 @@ public class OrderService {
 ```
 
 ### TODO
-- [ ] Tạo class `OrderService` (`placeOrder`)
-- [ ] Kiểm tra `orderNumber` sinh ngẫu nhiên bằng `UUID.randomUUID()`
+- [x] Tạo class `OrderService` (`placeOrder`)
+- [x] Kiểm tra `orderNumber` sinh ngẫu nhiên bằng `UUID.randomUUID()`
 
 ---
 
