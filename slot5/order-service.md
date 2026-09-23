@@ -189,8 +189,8 @@ public class Order {
 ```
 
 ### TODO
-- [x] Tạo package `com.fudn.orderservice.model`
-- [x] Tạo entity `Order` ánh xạ bảng `t_orders`
+- [ ] Tạo package `com.fudn.orderservice.model`
+- [ ] Tạo entity `Order` ánh xạ bảng `t_orders`
 
 ---
 
