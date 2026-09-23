@@ -14,7 +14,7 @@
 - [ ] Tạo Repository `OrderRepository`
 - [ ] Tạo DTO `OrderRequest`
 - [x] Tạo Service `OrderService`
-- [ ] Tạo Controller `OrderController`
+- [x] Tạo Controller `OrderController`
 - [ ] Test thủ công bằng Postman
 - [ ] Viết Integration Test (TestContainers + RestAssured)
 - [ ] Chạy `mvn test` thành công
@@ -306,8 +306,8 @@ public class OrderController {
 ```
 
 ### TODO
-- [ ] Tạo class `OrderController`
-- [ ] Endpoint `POST /api/order` → 201, trả về text "Order Placed Successfully"
+- [x] Tạo class `OrderController`
+- [x] Endpoint `POST /api/order` → 201, trả về text "Order Placed Successfully"
 
 ---
 
