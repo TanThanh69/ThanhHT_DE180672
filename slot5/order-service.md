@@ -6,10 +6,10 @@
 ## 0. Checklist tổng quan
 
 - [x] Tạo project Spring Boot tại start.spring.io
-- [ ] Cài MySQL bằng Docker Compose (dùng chung container với inventory-service)
-- [ ] Tạo `init.sql` để tạo database `order_service`
-- [ ] Cấu hình `application.properties`
-- [ ] Viết Flyway migration `V1__init.sql`
+- [x] Cài MySQL bằng Docker Compose (dùng chung container với inventory-service)
+- [x] Tạo `init.sql` để tạo database `order_service`
+- [x] Cấu hình `application.properties`
+- [x] Viết Flyway migration `V1__init.sql`
 - [ ] Tạo Model `Order`
 - [ ] Tạo Repository `OrderRepository`
 - [ ] Tạo DTO `OrderRequest`
@@ -101,10 +101,10 @@ Kết quả: Successed
 ```
 
 ### TODO
-- [ ] Tạo `docker-compose.yml` với service `mysql`
-- [ ] Tạo `mysql/init.sql` với `CREATE DATABASE IF NOT EXISTS order_service;`
-- [ ] `docker compose up -d mysql` chạy thành công
-- [ ] Kiểm tra container: `docker ps`
+- [x] Tạo `docker-compose.yml` với service `mysql`
+- [x] Tạo `mysql/init.sql` với `CREATE DATABASE IF NOT EXISTS order_service;`
+- [x] `docker compose up -d mysql` chạy thành công
+- [x] Kiểm tra container: `docker ps`
 
 ---
 
@@ -124,9 +124,9 @@ server.port=8081
 ```
 
 ### TODO
-- [ ] Thêm cấu hình datasource
-- [ ] `spring.jpa.hibernate.ddl-auto=none`
-- [ ] `server.port=8081`
+- [x] Thêm cấu hình datasource
+- [x] `spring.jpa.hibernate.ddl-auto=none`
+- [x] `server.port=8081`
 
 ---
 
@@ -149,9 +149,9 @@ CREATE TABLE `t_orders`
 ```
 
 ### TODO
-- [ ] Tạo thư mục `src/main/resources/db/migration/`
-- [ ] Tạo file `V1__init.sql` với bảng `t_orders`
-- [ ] Khởi động app, xác nhận log Flyway apply thành công
+- [x] Tạo thư mục `src/main/resources/db/migration/`
+- [x] Tạo file `V1__init.sql` với bảng `t_orders`
+- [x] Khởi động app, xác nhận log Flyway apply thành công
 
 ---
 
