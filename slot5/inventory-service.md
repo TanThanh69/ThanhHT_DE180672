@@ -10,7 +10,7 @@
 - [x] Cập nhật `init.sql` để thêm database `inventory_service` (dùng chung MySQL container với order-service)
 - [x] Cấu hình `application.properties`
 - [x] Viết Flyway migration `V1__init.sql` và `V2__add_inventory.sql`
-- [ ] Tạo Model `Inventory`
+- [x] Tạo Model `Inventory`
 - [ ] Tạo Repository `InventoryRepository`
 - [ ] Tạo Service `InventoryService`
 - [ ] Tạo Controller `InventoryController`
@@ -144,8 +144,8 @@ public class Inventory {
 ```
 
 ### TODO
-- [ ] Tạo package `com.fudn.inventoryservice.model`
-- [ ] Tạo entity `Inventory` ánh xạ bảng `t_inventory`
+- [x] Tạo package `com.fudn.inventoryservice.model`
+- [x] Tạo entity `Inventory` ánh xạ bảng `t_inventory`
 
 ---
 
