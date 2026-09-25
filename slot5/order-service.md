@@ -6,18 +6,18 @@
 ## 0. Checklist tổng quan
 
 - [x] Tạo project Spring Boot tại start.spring.io
-- [ ] Cài MySQL bằng Docker Compose (dùng chung container với inventory-service)
-- [ ] Tạo `init.sql` để tạo database `order_service`
-- [ ] Cấu hình `application.properties`
-- [ ] Viết Flyway migration `V1__init.sql`
-- [ ] Tạo Model `Order`
-- [ ] Tạo Repository `OrderRepository`
-- [ ] Tạo DTO `OrderRequest`
+- [x] Cài MySQL bằng Docker Compose (dùng chung container với inventory-service)
+- [x] Tạo `init.sql` để tạo database `order_service`
+- [x] Cấu hình `application.properties`
+- [x] Viết Flyway migration `V1__init.sql`
+- [x] Tạo Model `Order`
+- [x] Tạo Repository `OrderRepository`
+- [x] Tạo DTO `OrderRequest`
 - [x] Tạo Service `OrderService`
 - [x] Tạo Controller `OrderController`
-- [ ] Test thủ công bằng Postman
-- [ ] Viết Integration Test (TestContainers + RestAssured)
-- [ ] Chạy `mvn test` thành công
+- [x] Test thủ công bằng Postman
+- [x] Viết Integration Test (TestContainers + RestAssured)
+- [x] Chạy `mvn test` thành công
 
 ---
 
@@ -37,9 +37,9 @@ Dependencies:
 - `Testcontainers`
 
 ### TODO
-- [ ] Generate project với Group = `com.fudn`, Artifact = `order-service`
-- [ ] Mở project trong IDE
-- [ ] `mvn clean verify` chạy không lỗi
+- [x] Generate project với Group = `com.fudn`, Artifact = `order-service`
+- [x] Mở project trong IDE
+- [x] `mvn clean verify` chạy không lỗi
 
 ---
 
@@ -101,10 +101,10 @@ Kết quả: Successed
 ```
 
 ### TODO
-- [ ] Tạo `docker-compose.yml` với service `mysql`
-- [ ] Tạo `mysql/init.sql` với `CREATE DATABASE IF NOT EXISTS order_service;`
-- [ ] `docker compose up -d mysql` chạy thành công
-- [ ] Kiểm tra container: `docker ps`
+- [x] Tạo `docker-compose.yml` với service `mysql`
+- [x] Tạo `mysql/init.sql` với `CREATE DATABASE IF NOT EXISTS order_service;`
+- [x] `docker compose up -d mysql` chạy thành công
+- [x] Kiểm tra container: `docker ps`
 
 ---
 
@@ -124,9 +124,9 @@ server.port=8081
 ```
 
 ### TODO
-- [ ] Thêm cấu hình datasource
-- [ ] `spring.jpa.hibernate.ddl-auto=none`
-- [ ] `server.port=8081`
+- [x] Thêm cấu hình datasource
+- [x] `spring.jpa.hibernate.ddl-auto=none`
+- [x] `server.port=8081`
 
 ---
 
@@ -149,9 +149,9 @@ CREATE TABLE `t_orders`
 ```
 
 ### TODO
-- [ ] Tạo thư mục `src/main/resources/db/migration/`
-- [ ] Tạo file `V1__init.sql` với bảng `t_orders`
-- [ ] Khởi động app, xác nhận log Flyway apply thành công
+- [x] Tạo thư mục `src/main/resources/db/migration/`
+- [x] Tạo file `V1__init.sql` với bảng `t_orders`
+- [x] Khởi động app, xác nhận log Flyway apply thành công
 
 ---
 
@@ -189,8 +189,8 @@ public class Order {
 ```
 
 ### TODO
-- [ ] Tạo package `com.fudn.orderservice.model`
-- [ ] Tạo entity `Order` ánh xạ bảng `t_orders`
+- [x] Tạo package `com.fudn.orderservice.model`
+- [x] Tạo entity `Order` ánh xạ bảng `t_orders`
 
 ---
 
@@ -209,7 +209,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 ```
 
 ### TODO
-- [ ] Tạo interface `OrderRepository extends JpaRepository<Order, Long>`
+- [x] Tạo interface `OrderRepository extends JpaRepository<Order, Long>`
 
 ---
 
@@ -326,9 +326,9 @@ Content-Type: application/json
 → Kỳ vọng: **201**, body: `"Order Placed Successfully"`
 
 ### TODO / Checklist Postman
-- [ ] `mvn spring-boot:run` chạy service thành công trên port 8081
-- [ ] POST `/api/order` trả về 201 và đúng message
-- [ ] Kiểm tra dữ liệu đã lưu vào bảng `t_orders` (MySQL client / DBeaver)
+- [x] `mvn spring-boot:run` chạy service thành công trên port 8081
+- [x] POST `/api/order` trả về 201 và đúng message
+- [x] Kiểm tra dữ liệu đã lưu vào bảng `t_orders` (MySQL client / DBeaver)
 
 ---
 
@@ -401,21 +401,21 @@ mvn test
 ```
 
 ### TODO
-- [ ] Tạo `OrderServiceApplicationTests` (package `com.fudn.orderservice`)
-- [ ] Docker Desktop đang chạy (Testcontainers cần Docker)
-- [ ] `mvn test` PASS
+- [x] Tạo `OrderServiceApplicationTests` (package `com.fudn.orderservice`)
+- [x] Docker Desktop đang chạy (Testcontainers cần Docker)
+- [x] `mvn test` PASS
 
 ---
 
 ## ✅ Checklist hoàn thành Order Service
 
-- [ ] Cấu trúc thư mục đúng package `com.fudn.orderservice.*`
-- [ ] `docker compose up -d mysql` chạy ổn định, database `order_service` đã tồn tại
-- [ ] `application.properties` trỏ đúng datasource, port 8081
-- [ ] Flyway migration `V1__init.sql` chạy thành công (log "Successfully applied")
-- [ ] `Order`, `OrderRepository`, `OrderRequest`, `OrderService`, `OrderController` đã tạo đủ
-- [ ] Postman test POST `/api/order` đúng expected status code + message
-- [ ] `mvn test` chạy Integration Test PASS
+- [x] Cấu trúc thư mục đúng package `com.fudn.orderservice.*`
+- [x] `docker compose up -d mysql` chạy ổn định, database `order_service` đã tồn tại
+- [x] `application.properties` trỏ đúng datasource, port 8081
+- [x] Flyway migration `V1__init.sql` chạy thành công (log "Successfully applied")
+- [x] `Order`, `OrderRepository`, `OrderRequest`, `OrderService`, `OrderController` đã tạo đủ
+- [x] Postman test POST `/api/order` đúng expected status code + message
+- [x] `mvn test` chạy Integration Test PASS
 
 ---
 
