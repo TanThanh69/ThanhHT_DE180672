@@ -13,7 +13,7 @@
 - [x] Tạo Model `Inventory`
 - [x] Tạo Repository `InventoryRepository`
 - [x] Tạo Service `InventoryService`
-- [ ] Tạo Controller `InventoryController`
+- [x] Tạo Controller `InventoryController`
 - [ ] Test thủ công bằng Postman
 - [ ] Viết Integration Test (TestContainers + RestAssured)
 - [ ] Chạy `mvn test` thành công
@@ -235,8 +235,8 @@ public class InventoryController {
 ```
 
 ### TODO
-- [ ] Tạo class `InventoryController`
-- [ ] Endpoint `GET /api/inventory?skuCode=...&quantity=...` → 200, trả về `boolean`
+- [x] Tạo class `InventoryController`
+- [x] Endpoint `GET /api/inventory?skuCode=...&quantity=...` → 200, trả về `boolean`
 
 ---
 
