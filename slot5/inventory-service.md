@@ -8,7 +8,7 @@
 
 - [x] Tạo project Spring Boot tại start.spring.io
 - [x] Cập nhật `init.sql` để thêm database `inventory_service` (dùng chung MySQL container với order-service)
-- [ ] Cấu hình `application.properties`
+- [x] Cấu hình `application.properties`
 - [ ] Viết Flyway migration `V1__init.sql` và `V2__add_inventory.sql`
 - [ ] Tạo Model `Inventory`
 - [ ] Tạo Repository `InventoryRepository`
@@ -74,9 +74,9 @@ server.port=8082
 ```
 
 ### TODO
-- [ ] Thêm cấu hình datasource trỏ tới `inventory_service`
-- [ ] `spring.jpa.hibernate.ddl-auto=none`
-- [ ] `server.port=8082`
+- [x] Thêm cấu hình datasource trỏ tới `inventory_service`
+- [x] `spring.jpa.hibernate.ddl-auto=none`
+- [x] `server.port=8082`
 
 ---
 
