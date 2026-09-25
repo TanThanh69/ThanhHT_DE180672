@@ -7,7 +7,7 @@
 ## 0. Checklist tổng quan
 
 - [x] Tạo project Spring Boot tại start.spring.io
-- [ ] Cập nhật `init.sql` để thêm database `inventory_service` (dùng chung MySQL container với order-service)
+- [x] Cập nhật `init.sql` để thêm database `inventory_service` (dùng chung MySQL container với order-service)
 - [ ] Cấu hình `application.properties`
 - [ ] Viết Flyway migration `V1__init.sql` và `V2__add_inventory.sql`
 - [ ] Tạo Model `Inventory`
@@ -56,9 +56,9 @@ CREATE DATABASE IF NOT EXISTS inventory_service;
 ⚠️ Nếu container `mysql` đã chạy trước đó với volume dữ liệu cũ, `init.sql` sẽ **không** chạy lại tự động. Cần xóa volume cũ (`docker/mysql/data`) rồi `docker compose up -d mysql` lại, hoặc tạo database thủ công bằng lệnh SQL trực tiếp.
 
 ### TODO
-- [ ] Cập nhật `mysql/init.sql` với 2 dòng `CREATE DATABASE`
-- [ ] Nếu cần: reset volume MySQL và chạy lại container
-- [ ] Xác nhận cả 2 database `order_service` và `inventory_service` tồn tại
+- [x] Cập nhật `mysql/init.sql` với 2 dòng `CREATE DATABASE`
+- [x] Nếu cần: reset volume MySQL và chạy lại container
+- [x] Xác nhận cả 2 database `order_service` và `inventory_service` tồn tại
 
 ---
 
