@@ -9,7 +9,7 @@
 - [x] Tạo project Spring Boot tại start.spring.io
 - [x] Cập nhật `init.sql` để thêm database `inventory_service` (dùng chung MySQL container với order-service)
 - [x] Cấu hình `application.properties`
-- [ ] Viết Flyway migration `V1__init.sql` và `V2__add_inventory.sql`
+- [x] Viết Flyway migration `V1__init.sql` và `V2__add_inventory.sql`
 - [ ] Tạo Model `Inventory`
 - [ ] Tạo Repository `InventoryRepository`
 - [ ] Tạo Service `InventoryService`
@@ -108,9 +108,9 @@ VALUES (100, 'iphone_15'),
 > `Successfully applied 2 migrations to schema inventory_service, now at version v2`
 
 ### TODO
-- [ ] Tạo `V1__init.sql` (bảng `t_inventory`)
-- [ ] Tạo `V2__add_inventory.sql` (dữ liệu mẫu 4 SKU)
-- [ ] Khởi động app, xác nhận log Flyway apply 2 migration thành công
+- [x] Tạo `V1__init.sql` (bảng `t_inventory`)
+- [x] Tạo `V2__add_inventory.sql` (dữ liệu mẫu 4 SKU)
+- [x] Khởi động app, xác nhận log Flyway apply 2 migration thành công
 
 ---
 
