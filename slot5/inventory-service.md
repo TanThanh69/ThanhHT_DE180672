@@ -14,9 +14,9 @@
 - [x] Tạo Repository `InventoryRepository`
 - [x] Tạo Service `InventoryService`
 - [x] Tạo Controller `InventoryController`
-- [ ] Test thủ công bằng Postman
-- [ ] Viết Integration Test (TestContainers + RestAssured)
-- [ ] Chạy `mvn test` thành công
+- [x] Test thủ công bằng Postman
+- [x] Viết Integration Test (TestContainers + RestAssured)
+- [x] Chạy `mvn test` thành công
 
 ---
 
@@ -253,9 +253,9 @@ GET http://localhost:8082/api/inventory?skuCode=iphone_15&quantity=200
 → Kỳ vọng: `false` (chỉ có 100 cái, không đủ 200)
 
 ### TODO / Checklist Postman
-- [ ] `mvn spring-boot:run` chạy service thành công trên port 8082
-- [ ] GET với quantity=100 trả về `true`
-- [ ] GET với quantity=200 trả về `false`
+- [x] `mvn spring-boot:run` chạy service thành công trên port 8082
+- [x] GET với quantity=100 trả về `true`
+- [x] GET với quantity=200 trả về `false`
 
 ---
 
@@ -325,21 +325,21 @@ mvn test
 ```
 
 ### TODO
-- [ ] Tạo `InventoryServiceApplicationTests` (package `com.fudn.inventoryservice`)
-- [ ] Docker Desktop đang chạy (Testcontainers cần Docker)
-- [ ] `mvn test` PASS cả 2 assertion (true / false)
+- [x] Tạo `InventoryServiceApplicationTests` (package `com.fudn.inventoryservice`)
+- [x] Docker Desktop đang chạy (Testcontainers cần Docker)
+- [x] `mvn test` PASS cả 2 assertion (true / false)
 
 ---
 
 ## ✅ Checklist hoàn thành Inventory Service
 
-- [ ] Cấu trúc thư mục đúng package `com.fudn.inventoryservice.*`
-- [ ] `init.sql` đã cập nhật, database `inventory_service` tồn tại trong container MySQL chung
-- [ ] `application.properties` trỏ đúng datasource, port 8082
-- [ ] Flyway migration `V1__init.sql` + `V2__add_inventory.sql` chạy thành công, có 4 SKU mẫu
-- [ ] `Inventory`, `InventoryRepository`, `InventoryService`, `InventoryController` đã tạo đủ
-- [ ] Postman test GET `/api/inventory` trả về đúng `true`/`false`
-- [ ] `mvn test` chạy Integration Test PASS
+- [x] Cấu trúc thư mục đúng package `com.fudn.inventoryservice.*`
+- [x] `init.sql` đã cập nhật, database `inventory_service` tồn tại trong container MySQL chung
+- [x] `application.properties` trỏ đúng datasource, port 8082
+- [x] Flyway migration `V1__init.sql` + `V2__add_inventory.sql` chạy thành công, có 4 SKU mẫu
+- [x] `Inventory`, `InventoryRepository`, `InventoryService`, `InventoryController` đã tạo đủ
+- [x] Postman test GET `/api/inventory` trả về đúng `true`/`false`
+- [x] `mvn test` chạy Integration Test PASS
 
 ---
 

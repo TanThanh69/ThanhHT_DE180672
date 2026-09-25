@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "8f1a23bc-9d45-4e78-b123-c456789abcde",
+		"name": "Inventory Service",
+		"description": "Collection test các endpoint của Inventory Service theo inventory-service_test.md",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Check Stock - In Stock (quantity <= ton kho)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"In stock returns true\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"true\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=100",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Check Stock - Out of Stock (quantity > ton kho)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"In stock returns false\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"false\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=200",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Boundary Test - Dung bang ton kho",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"In stock returns true for boundary equal\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"true\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=pixel_8&quantity=100",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "pixel_8"
+						},
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Boundary Test - Vuot qua ton kho dung 1 don vi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"In stock returns false for boundary exceed 1\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"false\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=pixel_8&quantity=101",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "pixel_8"
+						},
+						{
+							"key": "quantity",
+							"value": "101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. SKU khong ton tai trong he thong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"In stock returns false for non-existent sku\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"false\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=not_exist_sku&quantity=1",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "not_exist_sku"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Thieu param quantity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Missing quantity returns 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Thieu param skuCode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Missing skuCode returns 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?quantity=10",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. quantity sai kieu du lieu (chuoi)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Invalid quantity type returns 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=abc",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "abc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. quantity la so am",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Negative quantity currently returns true without validation\", function () {",
+							"    pm.expect(pm.response.text()).to.eql(\"true\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=-5",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "-5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10. Sai method (POST thay vi GET)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"POST method returns 405 Method Not Allowed\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=1",
+					"host": [
+						"{{inventory_base_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

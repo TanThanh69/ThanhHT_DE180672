@@ -7,11 +7,11 @@
 
 ## 0. Checklist chuẩn bị trước khi test
 
-- [ ] Docker container `mysql` đang chạy (dùng chung với order-service)
-- [ ] Database `inventory_service` đã tồn tại (đã cập nhật `init.sql` thêm dòng `CREATE DATABASE IF NOT EXISTS inventory_service;`)
-- [ ] `inventory-service` đã chạy thành công (`mvn spring-boot:run`), không lỗi
-- [ ] Log xác nhận Flyway áp dụng đủ **2 migration**: `Successfully applied 2 migrations to schema inventory_service, now at version v2`
-- [ ] Bảng `t_inventory` có sẵn 4 dòng dữ liệu mẫu (từ `V2__add_inventory.sql`):
+- [x] Docker container `mysql` đang chạy (dùng chung với order-service)
+- [x] Database `inventory_service` đã tồn tại (đã cập nhật `init.sql` thêm dòng `CREATE DATABASE IF NOT EXISTS inventory_service;`)
+- [x] `inventory-service` đã chạy thành công (`mvn spring-boot:run`), không lỗi
+- [x] Log xác nhận Flyway áp dụng đủ **2 migration**: `Successfully applied 2 migrations to schema inventory_service, now at version v2`
+- [x] Bảng `t_inventory` có sẵn 4 dòng dữ liệu mẫu (từ `V2__add_inventory.sql`):
 
 | sku_code | quantity |
 |---|---|
@@ -20,7 +20,7 @@
 | galaxy_24 | 100 |
 | oneplus_12 | 100 |
 
-- [ ] Postman đã cài đặt, đã mở ứng dụng
+- [x] Postman đã cài đặt, đã mở ứng dụng
 
 ---
 
@@ -35,16 +35,16 @@ Tạo Environment `inventory-service-local`:
 | `inventory_base_url` | `http://localhost:8082` | `http://localhost:8082` |
 
 ### TODO
-- [ ] Tạo Environment `inventory-service-local`
-- [ ] Thêm biến `inventory_base_url`
-- [ ] Chọn Environment trước khi gửi request
+- [x] Tạo Environment `inventory-service-local`
+- [x] Thêm biến `inventory_base_url`
+- [x] Chọn Environment trước khi gửi request
 
 ### 1.2. Tạo Collection
 
 Tạo Collection `Inventory Service`.
 
 ### TODO
-- [ ] Tạo Collection `Inventory Service`
+- [x] Tạo Collection `Inventory Service`
 
 ---
 
@@ -73,8 +73,8 @@ pm.test("In stock returns true", function () {
 ```
 
 ### TODO
-- [ ] Tạo request `GET Check Stock - In Stock` trong Collection
-- [ ] Gửi request, xác nhận `200` + body `true`
+- [x] Tạo request `GET Check Stock - In Stock` trong Collection
+- [x] Gửi request, xác nhận `200` + body `true`
 
 ---
 
@@ -88,7 +88,7 @@ GET {{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=200
 **Kết quả kỳ vọng:** `200 OK`, body `false`
 
 ### TODO
-- [ ] Gửi request, xác nhận body `false`
+- [x] Gửi request, xác nhận body `false`
 
 ---
 
@@ -102,8 +102,8 @@ GET {{inventory_base_url}}/api/inventory?skuCode=pixel_8&quantity=100
 **Kết quả kỳ vọng:** `200 OK`, body `true` — vì query dùng `GreaterThanEqual` (`>=`), 100 vẫn hợp lệ.
 
 ### TODO
-- [ ] Gửi request với quantity đúng bằng tồn kho (100)
-- [ ] Xác nhận trả về `true` (kiểm tra đúng boundary `>=` chứ không phải `>`)
+- [x] Gửi request với quantity đúng bằng tồn kho (100)
+- [x] Xác nhận trả về `true` (kiểm tra đúng boundary `>=` chứ không phải `>`)
 
 ---
 
@@ -117,8 +117,8 @@ GET {{inventory_base_url}}/api/inventory?skuCode=pixel_8&quantity=101
 **Kết quả kỳ vọng:** `200 OK`, body `false`
 
 ### TODO
-- [ ] Gửi request quantity = 101
-- [ ] Xác nhận trả về `false`
+- [x] Gửi request quantity = 101
+- [x] Xác nhận trả về `false`
 
 ---
 
@@ -132,8 +132,8 @@ GET {{inventory_base_url}}/api/inventory?skuCode=not_exist_sku&quantity=1
 **Kết quả kỳ vọng:** `200 OK`, body `false` (vì `existsBySkuCodeAndQuantityIsGreaterThanEqual` không tìm thấy record nào khớp `sku_code`)
 
 ### TODO
-- [ ] Gửi request với SKU không có trong DB
-- [ ] Xác nhận trả về `false`, không phải lỗi 404/500
+- [x] Gửi request với SKU không có trong DB
+- [x] Xác nhận trả về `false`, không phải lỗi 404/500
 
 ---
 
@@ -154,8 +154,8 @@ pm.test("Missing quantity returns 400", function () {
 ```
 
 ### TODO
-- [ ] Gửi request thiếu `quantity`
-- [ ] Xác nhận status 400
+- [x] Gửi request thiếu `quantity`
+- [x] Xác nhận status 400
 
 ---
 
@@ -169,8 +169,8 @@ GET {{inventory_base_url}}/api/inventory?quantity=10
 **Kết quả kỳ vọng:** `400 Bad Request`
 
 ### TODO
-- [ ] Gửi request thiếu `skuCode`
-- [ ] Xác nhận status 400
+- [x] Gửi request thiếu `skuCode`
+- [x] Xác nhận status 400
 
 ---
 
@@ -184,8 +184,8 @@ GET {{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=abc
 **Kết quả kỳ vọng:** `400 Bad Request` (Spring không convert được `"abc"` sang `Integer`)
 
 ### TODO
-- [ ] Gửi request với `quantity=abc`
-- [ ] Xác nhận status 400
+- [x] Gửi request với `quantity=abc`
+- [x] Xác nhận status 400
 
 ---
 
@@ -201,8 +201,8 @@ GET {{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=-5
 > ⚠️ **Ghi nhận:** đây là edge case cho thấy thiếu validation đầu vào (tương tự order-service). Có thể ghi nhận làm điểm cải tiến (thêm `@Min(1)` hoặc kiểm tra thủ công trong Service).
 
 ### TODO
-- [ ] Gửi request với `quantity=-5`
-- [ ] Ghi nhận kết quả thực tế so với kỳ vọng hợp lý (nên từ chối số âm)
+- [x] Gửi request với `quantity=-5`
+- [x] Ghi nhận kết quả thực tế so với kỳ vọng hợp lý (nên từ chối số âm)
 
 ---
 
@@ -216,8 +216,8 @@ POST {{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=1
 **Kết quả kỳ vọng:** `405 Method Not Allowed`
 
 ### TODO
-- [ ] Đổi method sang POST, gửi request
-- [ ] Xác nhận status 405
+- [x] Đổi method sang POST, gửi request
+- [x] Xác nhận status 405
 
 ---
 
@@ -225,20 +225,20 @@ POST {{inventory_base_url}}/api/inventory?skuCode=iphone_15&quantity=1
 
 | # | Test case | Params | Status kỳ vọng | Body kỳ vọng | Đạt? |
 |---|---|---|---|---|---|
-| 1 | Đủ hàng | skuCode=iphone_15, quantity=100 | 200 | true | [ ] |
-| 2 | Không đủ hàng | skuCode=iphone_15, quantity=200 | 200 | false | [ ] |
-| 3 | Boundary `=` tồn kho | skuCode=pixel_8, quantity=100 | 200 | true | [ ] |
-| 4 | Boundary vượt 1 đơn vị | skuCode=pixel_8, quantity=101 | 200 | false | [ ] |
-| 5 | SKU không tồn tại | skuCode=not_exist_sku, quantity=1 | 200 | false | [ ] |
-| 6 | Thiếu `quantity` | skuCode=iphone_15 | 400 | — | [ ] |
-| 7 | Thiếu `skuCode` | quantity=10 | 400 | — | [ ] |
-| 8 | Sai kiểu `quantity` | quantity=abc | 400 | — | [ ] |
-| 9 | `quantity` âm | quantity=-5 | 200 (hiện tại) / nên 400 | true (hiện tại) | [ ] |
-| 10 | Sai method (POST) | — | 405 | — | [ ] |
+| 1 | Đủ hàng | skuCode=iphone_15, quantity=100 | 200 | true | [x] |
+| 2 | Không đủ hàng | skuCode=iphone_15, quantity=200 | 200 | false | [x] |
+| 3 | Boundary `=` tồn kho | skuCode=pixel_8, quantity=100 | 200 | true | [x] |
+| 4 | Boundary vượt 1 đơn vị | skuCode=pixel_8, quantity=101 | 200 | false | [x] |
+| 5 | SKU không tồn tại | skuCode=not_exist_sku, quantity=1 | 200 | false | [x] |
+| 6 | Thiếu `quantity` | skuCode=iphone_15 | 400 | — | [x] |
+| 7 | Thiếu `skuCode` | quantity=10 | 400 | — | [x] |
+| 8 | Sai kiểu `quantity` | quantity=abc | 400 | — | [x] |
+| 9 | `quantity` âm | quantity=-5 | 200 (hiện tại) / nên 400 | true (hiện tại) | [x] |
+| 10 | Sai method (POST) | — | 405 | — | [x] |
 
-- [ ] Export Postman Collection ra file `.json` để lưu lại
-- [ ] Ghi lại kết quả thực tế từng test case (chụp màn hình/note) để nộp bài
-- [ ] Đối chiếu dữ liệu bảng `t_inventory` qua DBeaver/Adminer khớp với dữ liệu mẫu ở Test Case 0
+- [x] Export Postman Collection ra file `.json` để lưu lại
+- [x] Ghi lại kết quả thực tế từng test case (chụp màn hình/note) để nộp bài
+- [x] Đối chiếu dữ liệu bảng `t_inventory` qua DBeaver/Adminer khớp với dữ liệu mẫu ở Test Case 0
 
 ---
 
