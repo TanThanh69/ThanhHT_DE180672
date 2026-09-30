@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "c1a2b3c4-d5e6-7890-abcd-ef0123456789",
+		"name": "Part3_Gateway_Postman_Collection",
+		"description": "Postman Collection for Part 3 - API Gateway Routing & OpenFeign testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "T5.1 Get Products via Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T5.2 Create Product via Gateway",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"iPhone 15\",\n    \"description\": \"iPhone 15 is a smartphone from Apple\",\n    \"price\": 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T5.3 Place Order via Gateway (In Stock)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"skuCode\": \"iphone_15\",\n    \"price\": 1000,\n    \"quantity\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T5.4 Check Inventory via Gateway",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/inventory?skuCode=iphone_15&quantity=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "T5.5 Unmapped Route (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/non-existent-route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"non-existent-route"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
