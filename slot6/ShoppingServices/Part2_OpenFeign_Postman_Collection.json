@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "76a59b20-13d8-4f18-a6f3-1815f9b4c091",
+		"name": "MSS301 - Part 2 OpenFeign",
+		"description": "Postman Collection for testing OpenFeign communication between Order Service and Inventory Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Check Inventory (Direct to Inventory Service)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/inventory?skuCode=iphone_15&quantity=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_15"
+						},
+						{
+							"key": "quantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Place Order - In Stock (Expect 201 Created)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"skuCode\": \"iphone_15\",\n  \"price\": 1000,\n  \"quantity\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Place Order - Out Of Stock (Expect 500 Error)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"skuCode\": \"iphone_15\",\n  \"price\": 1000,\n  \"quantity\": 101\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
