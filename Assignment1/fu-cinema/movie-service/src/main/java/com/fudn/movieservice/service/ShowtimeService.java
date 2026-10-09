@@ -30,7 +30,9 @@ public class ShowtimeService {
     private final MovieService movieService;
     private final RoomService roomService;
 
-    // TODO 6.4: loc theo movieId va/hoac ngay chieu
+    /**
+     * TODO 6.4: Loc lich chieu theo movieId va/hoac ngay chieu (date yyyy-MM-dd).
+     */
     public List<ShowtimeResponse> search(String movieId, LocalDate date) {
         List<Showtime> showtimes = (movieId == null || movieId.isBlank())
                 ? showtimeRepository.findAllByOrderByStartTimeAsc()
