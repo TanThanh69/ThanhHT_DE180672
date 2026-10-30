@@ -32,7 +32,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -75,7 +83,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -115,7 +131,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -156,7 +180,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -197,7 +229,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -232,7 +272,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             }
           },
           "event": [
@@ -253,7 +301,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -295,7 +351,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/register"
+              "raw": "{{gateway}}/api/customers/register",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "register"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -344,7 +408,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/register"
+              "raw": "{{gateway}}/api/customers/register",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "register"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -380,7 +452,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/register"
+              "raw": "{{gateway}}/api/customers/register",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "register"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -419,7 +499,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -450,7 +538,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -488,7 +584,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -539,7 +643,16 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/me/password"
+              "raw": "{{gateway}}/api/customers/me/password",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me",
+                "password"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -585,7 +698,16 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/me/password"
+              "raw": "{{gateway}}/api/customers/me/password",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me",
+                "password"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -631,7 +753,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/auth/login"
+              "raw": "{{gateway}}/api/auth/login",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -662,7 +792,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers"
+              "raw": "{{gateway}}/api/customers",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -699,6 +836,13 @@
                   "key": "keyword",
                   "value": "gmail"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers"
               ]
             },
             "auth": {
@@ -733,7 +877,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/99999"
+              "raw": "{{gateway}}/api/customers/99999",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "99999"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -770,7 +922,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers"
+              "raw": "{{gateway}}/api/customers",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -826,7 +985,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}"
+              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "{{adminCreatedId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -866,7 +1033,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}"
+              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "{{adminCreatedId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -897,7 +1072,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}"
+              "raw": "{{gateway}}/api/customers/{{adminCreatedId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "{{adminCreatedId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -929,7 +1112,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -966,7 +1157,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/customers/me"
+              "raw": "{{gateway}}/api/customers/me",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "me"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1003,7 +1202,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/genres"
+              "raw": "{{gateway}}/api/genres",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
             }
           },
           "event": [
@@ -1031,7 +1237,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/genres"
+              "raw": "{{gateway}}/api/genres",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1078,7 +1291,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/genres"
+              "raw": "{{gateway}}/api/genres",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1124,7 +1344,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/genres"
+              "raw": "{{gateway}}/api/genres",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1170,7 +1397,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/genres/{{genreId}}"
+              "raw": "{{gateway}}/api/genres/{{genreId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "{{genreId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1210,7 +1445,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/genres/{{seedGenreActionId}}"
+              "raw": "{{gateway}}/api/genres/{{seedGenreScifiId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "{{seedGenreScifiId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1247,7 +1490,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/rooms"
+              "raw": "{{gateway}}/api/rooms",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "rooms"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1290,7 +1540,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/rooms"
+              "raw": "{{gateway}}/api/rooms",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "rooms"
+              ]
             }
           },
           "event": [
@@ -1317,7 +1574,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/rooms"
+              "raw": "{{gateway}}/api/rooms",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "rooms"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1363,7 +1627,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/rooms"
+              "raw": "{{gateway}}/api/rooms",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "rooms"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1414,7 +1685,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/movies"
+              "raw": "{{gateway}}/api/movies",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1464,6 +1742,13 @@
                   "key": "keyword",
                   "value": "galaxy"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies"
               ]
             }
           },
@@ -1497,6 +1782,13 @@
                   "key": "genreId",
                   "value": "{{seedGenreScifiId}}"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies"
               ]
             }
           },
@@ -1528,7 +1820,15 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/movies/{{movieId}}"
+              "raw": "{{gateway}}/api/movies/{{movieId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "{{movieId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1568,7 +1868,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/movies/{{notFoundId}}"
+              "raw": "{{gateway}}/api/movies/{{notFoundId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "{{notFoundId}}"
+              ]
             }
           },
           "event": [
@@ -1595,7 +1903,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/movies"
+              "raw": "{{gateway}}/api/movies",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1641,7 +1956,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/movies"
+              "raw": "{{gateway}}/api/movies",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1681,7 +2003,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/genres/{{genreId}}"
+              "raw": "{{gateway}}/api/genres/{{genreId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "{{genreId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1723,7 +2053,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1791,7 +2128,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1837,7 +2181,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1884,7 +2235,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1930,7 +2288,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -1976,7 +2341,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2026,6 +2398,13 @@
                   "key": "date",
                   "value": "{{futureDate}}"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
               ]
             }
           },
@@ -2055,7 +2434,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/showtimes/{{showtimeId}}"
+              "raw": "{{gateway}}/api/showtimes/{{showtimeId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes",
+                "{{showtimeId}}"
+              ]
             }
           },
           "event": [
@@ -2081,7 +2468,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/showtimes/{{showtime2Id}}"
+              "raw": "{{gateway}}/api/showtimes/{{showtime2Id}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes",
+                "{{showtime2Id}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2112,7 +2507,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/showtimes/{{showtime2Id}}"
+              "raw": "{{gateway}}/api/showtimes/{{showtime2Id}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes",
+                "{{showtime2Id}}"
+              ]
             }
           },
           "event": [
@@ -2134,7 +2537,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/rooms/{{roomId}}"
+              "raw": "{{gateway}}/api/rooms/{{roomId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "rooms",
+                "{{roomId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2165,7 +2576,15 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/movies/{{movieId}}"
+              "raw": "{{gateway}}/api/movies/{{movieId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "{{movieId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2202,7 +2621,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/showtimes"
+              "raw": "{{gateway}}/api/showtimes",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "showtimes"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2247,7 +2673,17 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/showtimes/{{showtimeId}}/seats"
+              "raw": "{{gateway}}/api/bookings/showtimes/{{showtimeId}}/seats",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "showtimes",
+                "{{showtimeId}}",
+                "seats"
+              ]
             }
           },
           "event": [
@@ -2280,7 +2716,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2338,7 +2781,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2385,7 +2835,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2431,7 +2888,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2477,7 +2941,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2523,7 +2994,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2569,7 +3047,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2615,7 +3100,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2661,7 +3153,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2707,7 +3206,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2753,7 +3259,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "body": {
               "mode": "raw",
@@ -2789,7 +3302,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2830,7 +3350,17 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/showtimes/{{showtimeId}}/seats"
+              "raw": "{{gateway}}/api/bookings/showtimes/{{showtimeId}}/seats",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "showtimes",
+                "{{showtimeId}}",
+                "seats"
+              ]
             }
           },
           "event": [
@@ -2861,7 +3391,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/my"
+              "raw": "{{gateway}}/api/bookings/my",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "my"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2899,7 +3437,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/{{bookingId}}"
+              "raw": "{{gateway}}/api/bookings/{{bookingId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{bookingId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2930,7 +3476,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/{{bookingId}}"
+              "raw": "{{gateway}}/api/bookings/{{bookingId}}",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{bookingId}}"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2961,7 +3515,16 @@
             "method": "PUT",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel"
+              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{booking2Id}}",
+                "cancel"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -2992,7 +3555,16 @@
             "method": "PUT",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel"
+              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{booking2Id}}",
+                "cancel"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3024,7 +3596,16 @@
             "method": "PUT",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel"
+              "raw": "{{gateway}}/api/bookings/{{booking2Id}}/cancel",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{booking2Id}}",
+                "cancel"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3061,7 +3642,14 @@
               }
             ],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3102,7 +3690,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings"
+              "raw": "{{gateway}}/api/bookings",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3133,7 +3728,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/my"
+              "raw": "{{gateway}}/api/bookings/my",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "my"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3164,7 +3767,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{gateway}}/api/bookings/99999"
+              "raw": "{{gateway}}/api/bookings/99999",
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "99999"
+              ]
             },
             "auth": {
               "type": "bearer",
@@ -3210,6 +3821,14 @@
                   "key": "endDate",
                   "value": "{{today}}"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "report"
               ]
             },
             "auth": {
@@ -3285,6 +3904,14 @@
                   "key": "endDate",
                   "value": "2026-01-01"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "report"
               ]
             },
             "auth": {
@@ -3326,6 +3953,14 @@
                   "key": "endDate",
                   "value": "{{today}}"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "report"
               ]
             },
             "auth": {
@@ -3363,6 +3998,14 @@
                   "key": "startDate",
                   "value": "{{today}}"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "report"
               ]
             },
             "auth": {
@@ -3404,6 +4047,14 @@
                   "key": "endDate",
                   "value": "2020-01-31"
                 }
+              ],
+              "host": [
+                "{{gateway}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "report"
               ]
             },
             "auth": {
