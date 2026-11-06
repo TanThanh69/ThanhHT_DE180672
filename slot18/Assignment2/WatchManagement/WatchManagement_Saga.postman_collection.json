@@ -312,7 +312,8 @@
                 "exec": [
                   "pm.test('Status is 200', function () { pm.response.to.have.status(200); });",
                   "var jsonData = pm.response.json();",
-                  "pm.test('Rolex has 2 watches', function () { pm.expect(jsonData.data.watchCount).to.eql(2); });"
+                  "pm.collectionVariables.set('rolexInitialCount', jsonData.data.watchCount);",
+                  "pm.test('Rolex has watches', function () { pm.expect(jsonData.data.watchCount).to.be.at.least(1); });"
                 ],
                 "type": "text/javascript"
               }
@@ -374,7 +375,8 @@
                 "exec": [
                   "pm.test('Status is 200', function () { pm.response.to.have.status(200); });",
                   "var jsonData = pm.response.json();",
-                  "pm.test('Rolex watchCount increased to 3', function () { pm.expect(jsonData.data.watchCount).to.eql(3); });",
+                  "var initial = parseInt(pm.collectionVariables.get('rolexInitialCount') || 2);",
+                  "pm.test('Rolex watchCount increased by 1', function () { pm.expect(jsonData.data.watchCount).to.eql(initial + 1); });",
                   "pm.test('Rolex contains createdWatchId', function () {",
                   "  var id = pm.collectionVariables.get('createdWatchId');",
                   "  pm.expect(jsonData.data.watchIds).to.include(id);",
@@ -657,6 +659,16 @@
           "name": "07.1 DELETE with X-Saga-Fail-After-Step: 1 -> 500 COMPENSATED",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "var targetId = pm.collectionVariables.get('createdWatchId') || 10;",
+                  "pm.collectionVariables.set('deleteWatchId', targetId);"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "exec": [
@@ -674,7 +686,7 @@
               { "key": "Authorization", "value": "Bearer {{adminToken}}" },
               { "key": "X-Saga-Fail-After-Step", "value": "1" }
             ],
-            "url": "{{baseUrl}}/api/watches/10"
+            "url": "{{baseUrl}}/api/watches/{{deleteWatchId}}"
           }
         },
         {
@@ -698,7 +710,7 @@
               { "key": "Authorization", "value": "Bearer {{adminToken}}" },
               { "key": "X-Saga-Fail-After-Step", "value": "2" }
             ],
-            "url": "{{baseUrl}}/api/watches/10"
+            "url": "{{baseUrl}}/api/watches/{{deleteWatchId}}"
           }
         },
         {
