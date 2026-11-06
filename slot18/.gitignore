@@ -1,0 +1,13 @@
+target/
+*.class
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.log
+.env
+~$*
+.DS_Store
+Thumbs.db
+.git_standalone/
